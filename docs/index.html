@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="specialStyle.css" />
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    <title>Георгий Бартоломей</title>
+</head>
+
+<body>
+    <section class="fullScreenBlock firstBlock">
+        <div id="first" class="transparent animated">
+            <h1>Специалист по разработке сайтов Георгий Бартоломей</h1>
+
+            <div class="column is-large">
+                Зачем вам нужен сайт?
+
+                <ol>
+                    <li>
+                        <span class="is-bold">Доверие.</span>
+                        Клиенты больше
+                        доверяют бизнесу, у которого есть свой сайт.
+                    </li>
+                    <li>
+                        <span class="is-bold">Реклама.</span> С сайтом вы можете настроить таргетную рекламу
+                        в интернете.
+                    </li>
+                    <li>
+                        <span class="is-bold">Электронные заказы.</span>
+                        Пользователь будет производить покупки прямо
+                        на сайте. А администратор будет видеть все заказы в
+                        удобном интерфейсе.
+                    </li>
+                </ol>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="fullScreenBlock secondBlock">
+        <div id="second" class="animated transparent">
+            <h1>
+                Удобный сайт + Реклама + Маркетинг = Рост продаж
+            </h1>
+            <p>
+                Если у вашего бизнеса нет сайта, а у вашего конкурента есть,
+                то посетители уйдут к нему.
+            </p>
+            <h3>
+                Мыслите на шаг вперед! Опередите своего конкурента!
+            </h3>
+        </div>
+    </section>
+
+    <section class="fullScreenBlock thirthBlock">
+        <div id="thirth" class="animated transparent">
+            <h1>Какие современные технологии используются для разработки сайта?</h1>
+            <div class="columns">
+                <div>
+                    <h3 class="is-color-active">
+                        Angular
+                    </h3>
+                    <p>**Frontend**</p>
+                    <p>
+                        Современный фреймворк для создание высококлассных веб-приложений
+                    </p>
+                </div>
+                <div>
+                    <h3 class="is-color-active">
+                        NodeJS || ASP.NET Core
+                    </h3>
+                    <p>**Backend**</p>
+                    <p>
+                        Удобные технологии для создания серверных API для сайта и не только
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="fullScreenBlock fourthBlock">
+        <div id="fourth" class="animated transparent">
+
+            <div class="grid has-gap">
+                <div>
+                    <h1>Возможности</h1>
+                    <ul class="list" id="p">
+                        <li data-id="register">Регистрация</li>
+                        <li data-id="online-orders">Онлайн заказы</li>
+                        <li data-id="analytics">Аналитика</li>
+                        <li data-id="seo">SEO</li>
+                        <li data-id="anything">И всё, что вы захотите</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>Описание</h1>
+                    <div id="d">
+                        Нажмите по одному из элементов списка для просмотра подробностей.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
+    <script src="scripts/scrollMagic.js"></script>
+    <script src="scripts/possiblities.js"></script>
+    <script>
+        bind('p', 'd')
+
+        var controller = new ScrollMagic.Controller();
+        var firstTween = new TweenMax.to('#first', 1.5, {
+            opacity: 1
+        });
+
+        var duration = 800;
+        var firstScene = new ScrollMagic.Scene({
+            triggerElement: '#first', duration: duration
+        })
+            .on("enter leave", function (e) {
+                if (e.type == "enter") $("#first").addClass("fadeIn").removeClass("fadeOut")
+                else $("#first").removeClass("fadeIn").addClass("fadeOut")
+            })
+            .addTo(controller);
+
+        var secondScene = new ScrollMagic.Scene({
+            triggerElement: '#second', duration: duration
+        })
+            .on("enter leave", function (e) {
+                if (e.type == "enter") $("#second").addClass("fadeIn").removeClass("fadeOut")
+                else $("#second").removeClass("fadeIn").addClass("fadeOut")
+            })
+            .addTo(controller)
+
+        var thirthScene = new ScrollMagic.Scene({
+            triggerElement: '#thirth', duration: duration
+        })
+            .on("enter leave", function (e) {
+                if (e.type == "enter") $("#thirth").addClass("fadeIn").removeClass("fadeOut")
+                else $("#thirth").removeClass("fadeIn").addClass("fadeOut")
+            })
+            .addTo(controller)
+
+        var fourthScene = new ScrollMagic.Scene({
+            triggerElement: '#fourth', duration: duration
+        })
+            .on("enter leave", function (e) {
+                if (e.type == "enter") $("#fourth").addClass("fadeIn").removeClass("fadeOut")
+                else $("#fourth").removeClass("fadeIn").addClass("fadeOut")
+            })
+            .addTo(controller)
+    </script>
+</body>
+
+</html>

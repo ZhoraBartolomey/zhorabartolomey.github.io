@@ -1,0 +1,61 @@
+
+
+.fullScreenBlock > * {
+    margin: auto;
+}
+.firstBlock {
+    background: url(images/abstract2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.secondBlock {
+    background: url(images/city.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+
+#playButton {
+    background-color:#ffef15; height:50px;width:150px;position: absolute;z-index:10; border: none; font-family: 'Press Start 2P', cursive;
+            transition: all 0.125s;
+}
+
+#playButton:focus {
+    background-color: #b9ae12
+}
+
+.is-retro-font {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.thirthBlock {
+    background: linear-gradient(#2140ca, #15287e);
+    
+    color: rgb(255, 239, 212);
+}
+
+.fourthBlock {
+    background: url(images/abstract.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right;
+    color: white;
+    
+}
+.thirthBlock * {
+    font-family: 'Fira Code';
+}
+
+.is-color-active {
+    color: rgb(212, 212, 212);
+}
+
+.transparent {
+    opacity: 0;
+}

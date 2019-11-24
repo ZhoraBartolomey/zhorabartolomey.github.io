@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+@import url('styles/columns.css');
+@import url('styles/grid.css');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+html,
+body {
+    font-size: 1.25rem;
+    font-family: 'Lora', serif;
+    margin: 0;
+}
+
+
+
+.is-bold {
+    font-weight: bold;
+}
+
+h1 {
+    margin: 0 0.5rem 0 0;
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+li {
+    margin-bottom: 1rem;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                    not supported by any browser */
+}

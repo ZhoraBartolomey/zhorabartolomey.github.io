@@ -1,0 +1,46 @@
+.columns {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.columns > div {
+    margin: auto;
+}
+
+.columns > div.is-grow {
+    flex-grow: 1;
+}
+
+.fullScreenBlock {
+    min-height: 100vh;
+    
+    padding: 2rem 1rem 2rem 1rem;
+    display: flex;
+}
+
+@media all and (max-width: 800px) {
+    .columns, .fullScreenBlock {
+        flex-direction: column;
+    }
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.list > li {
+    border-bottom: 2px solid white;
+    margin: 0;
+    padding: 0.5rem;
+}
+.list > li:last-child {
+    border-bottom: none;
+}
+.list > li:hover:not(.is-active) {
+    background-color: rgba(0, 0, 0, 0.1)
+}
+.list > li:active, li.is-active {
+    background-color: rgba(0, 0, 0, 0.4)
+}
